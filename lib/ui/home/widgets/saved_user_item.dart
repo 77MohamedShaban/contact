@@ -71,14 +71,12 @@ class SavedUserItem extends StatelessWidget {
                       spacing: 8,
                       children: [
                         SvgPicture.asset("assets/images/email_icon.svg"),
-                        Expanded(
-                          child: Text(
-                            user.email,
-                            style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.w500,
-                              color: Color(0xff29384D),
-                            ),
+                        Text(
+                          user.email,
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w500,
+                            color: Color(0xff29384D),
                           ),
                         ),
                       ],

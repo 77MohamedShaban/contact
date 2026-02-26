@@ -7,7 +7,8 @@ class TextFieldLogin extends StatelessWidget {
  TextFieldLogin({required this.text,required this.onChanged,required this.type});
   @override
   Widget build(BuildContext context) {
-    return  Expanded(
+    return  SizedBox(
+      height: 50,
       child: TextField(
         keyboardType: type
         ,onChanged: onChanged

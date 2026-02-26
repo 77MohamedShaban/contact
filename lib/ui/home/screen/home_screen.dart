@@ -147,51 +147,41 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
                         const SizedBox(height: 10),
-                        SizedBox(
-                          height: 50
-                          ,child: TextFieldLogin(
-                            text: "Enter User Name",
-                            onChanged: (value) {
-                              setStateSheet(() {
-                                tempUser.name = value;
-                              });
-                            },
-                            type: TextInputType.name,
-                          ),
-                        ),
-                        const SizedBox(height: 5),
-                        SizedBox(
-                          height: 50
-                          ,child: TextFieldLogin(
-                            text: "Enter User Email",
-                            onChanged: (value) {
-                              setStateSheet(() {
-                                tempUser.email = value;
-                              });
-                            },
-                            type: TextInputType.emailAddress,
-                          ),
-                        ),
-                        const SizedBox(height: 5),
-                        SizedBox(
-                          height: 50
-                          ,child: TextFieldLogin(
-                            text: "Enter User Phone",
-                            onChanged: (value) {
-                              setStateSheet(() {
-                                tempUser.phone = value;
-                              });
-                            },
-                            type: TextInputType.phone,
-                          ),
-                        ),
+                       Expanded(
+                         child: Column(spacing: 5,children: [
+                           TextFieldLogin(
+                             text: "Enter User Name",
+                             onChanged: (value) {
+                               setStateSheet(() {
+                                 tempUser.name = value;
+                               });
+                             },
+                             type: TextInputType.name,
+                           ),
+                           TextFieldLogin(
+                             text: "Enter User Email",
+                             onChanged: (value) {
+                               setStateSheet(() {
+                                 tempUser.email = value;
+                               });
+                             },
+                             type: TextInputType.emailAddress,
+                           ),
+                           TextFieldLogin(
+                             text: "Enter User Phone",
+                             onChanged: (value) {
+                               setStateSheet(() {
+                                 tempUser.phone = value;
+                               });
+                             },
+                             type: TextInputType.phone,
+                           ),
+                         ],),
+                       )
 
-                        const Spacer(),
-
-                        /// Button
-                        SizedBox(
+                        ,SizedBox(
                           width: double.infinity,
-                          height: 50,
+                          height: 55,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               backgroundColor: const Color(0xffFFF1D4),
@@ -221,6 +211,7 @@ class _HomeScreenState extends State<HomeScreen> {
             },
           );
 
+          /// بعد ما الـ BottomSheet يقفل
           if (result != null) {
             setState(() {
               users.add(result);
