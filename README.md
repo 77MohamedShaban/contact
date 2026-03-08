@@ -64,7 +64,7 @@ assets/
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/contact-app.git
+    git clone https://github.com/77MohamedShaban/contact.git
     ```
 2.  **Navigate to the project directory:**
     ```bash
@@ -86,4 +86,4 @@ The app uses a sophisticated color palette featuring deep blues (`#29384D`) and 
 
 ---
 
-**Developed with ❤️ by [Your Name]**
+**Developed with ❤️ by [Mohamed Shaban](https://github.com/77MohamedShaban)
