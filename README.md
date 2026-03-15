@@ -15,9 +15,10 @@ A sleek and modern Flutter application designed to manage your contacts efficien
 
 *   **Add Contacts:** Easily add new contacts with their Name, Email, and Phone Number.
 *   **Profile Pictures:** Select profile images from your gallery using `image_picker`.
+*   **Persistent Storage:** Contacts are saved locally using `shared_preferences`, so they remain even after closing the app.
 *   **Modern UI:** A clean "Dark Mode" inspired design with a grid-based contact list.
 *   **Interactive Animations:** Integrated `Lottie` animations for empty states and transitions.
-*   **Manage Contacts:** Delete contacts with a simple tap.
+*   **Manage Contacts:** Delete contacts individually or clear the list.
 *   **Professional Splash Screen:** Custom branded splash screen using `flutter_native_splash`.
 
 ---
@@ -27,6 +28,7 @@ A sleek and modern Flutter application designed to manage your contacts efficien
 *   **Framework:** [Flutter](https://flutter.dev/)
 *   **Language:** [Dart](https://dart.dev/)
 *   **Key Packages:**
+    *   `shared_preferences`: For local data persistence.
     *   `lottie`: For high-quality animations.
     *   `image_picker`: For selecting images from the device.
     *   `flutter_svg`: For rendering vector graphics.
@@ -38,18 +40,17 @@ A sleek and modern Flutter application designed to manage your contacts efficien
 
 ```text
 lib/
-├── main.dart             # Application entry point
-├── model/                # Data models (UserModel)
-├── ui/
-│   ├── home/
-│   │   ├── screen/       # Main Home Screen
-│   │   └── widgets/      # Reusable UI components
-│   │       ├── saved_user_item.dart
-│   │       ├── text_field_login.dart
-│   │       └── no_files_section.dart
+├── core/
+│   ├── models/           # Data models (Contact class)
+│   ├── remote/local/     # Local storage management (PrefsManager)
+│   ├── utils/            # App constants (Colors, Assets, Validators)
+│   └── widgets/          # Reusable UI components (Cards, Sheets, FormFields)
+├── screens/
+│   └── home_screen.dart  # Main application screen
+└── main.dart             # Application entry point
 assets/
 ├── images/               # App icons and static images
-└── animations/           # Lottie JSON files
+└── lottie/               # Lottie animation JSON files
 ```
 
 ---
@@ -86,4 +87,4 @@ The app uses a sophisticated color palette featuring deep blues (`#29384D`) and 
 
 ---
 
-**Developed with ❤️ by [Your Name]**
+**Developed with ❤️ by [Mohamed Shaban](https://github.com/77MohamedShaban)
