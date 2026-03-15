@@ -65,7 +65,7 @@ assets/
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/contact-app.git
+    git clone https://github.com/77MohamedShaban/contact.git
     ```
 2.  **Navigate to the project directory:**
     ```bash
