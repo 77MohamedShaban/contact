@@ -21,7 +21,6 @@ class CustomTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       autocorrect: true,
-      cursorColor: AppColors.gold,
       cursorRadius: Radius.circular(16),
       controller: controller,
       keyboardType: keyboardType,
